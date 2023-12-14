@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Mon Site Web Multipages</title>
+    <style>
+        /* Style pour les étoiles */
+        .score {
+            font-size: 24px;
+            color: gold;
+        }
+        /* Style pour le conteneur du texte et de la barre d'étoiles */
+        .text-with-score {
+            display: flex;
+            align-items: center;
+        }
+        /* Ajoute un espace entre le texte et la barre d'étoiles */
+        .text-with-score p {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <!-- Barre de navigation -->
+        <nav id="nav">   
+            <a href="#Accueil">Accueil</a>
+            <a href="#A propos">A propos</a>
+            <a href="#Compétences">Compétences</a>
+            <a href="#Expérience">Expérience</a>
+            <a href="#Formation">Formation</a>
+            <a href="#Contact">Contact</a>    
+        </nav>
+    </header>
+    
+
+    <main>  
+        <!-- Contenu de la page 1 -->
+        <section id="Accueil">
+            <h1><u>Accueil</u></h1>
+            <p>Salut, je suis<span class="nom"> Clément PAPILLON</span> et le gars juste en bas c'est moi, bref amusez vous bien en explorant mon site faites comme chez vous surtout. </p>
+            <p>Petit conseil pour changer de page vous avez juste a cliquer juste au dessus !</p>
+            <style>
+                /* Style pour aligner l'image à gauche */
+                img {
+                    float: left;
+                    margin-right: 10px;
+                }
+            </style>
+            <img src="clement.jpg" alt="Clément PAPILLON" width="300" height="350">
+        
+        </section>
+
+        <!-- Contenu de la page 2 -->
+        <section id="A propos">
+            <h1><u>A propos</u></h1>
+            <p>Explorez un univers captivant où chaque clic ouvre la porte à l'inattendu(j'ai menti). Bienvenue sur le seul et l'unique site de Clément, où la découverte devient une aventure et chaque page raconte une histoire unique(c'est techniquement un peu vrai).</p>
+            <p>Pour commencer, je vous propose une petite présentation de ma personne. J'ai commencé à coder en HTML à l'âge de 15 ans lors d'un stage d'une semaine, ce qui m'a orienté vers un bac STI2D option SIN. Ensuite, j'ai fait une parenthèse en travaillant pendant un an dans un KFC, mais oublions cette partie. Enfin, je me suis inscrit pour faire un BTS SIO, où je suis actuellement. Voici une petite info bonus : j'adore les chats.</p>
+            
+            <img src="clement.jpg" alt="Clément PAPILLON" width="300" height="350">
+            <img src="chat.jpg" alt="Mon petit chat" width="300" height="350">
+            <figcaption><em>je n'ai qu'une photo de moi alors pour compenser voici mon chat c'est cadeau.</em></figcaption>
+
+            
+            
+        </section>
+
+        <!-- Contenu de la page 3 -->
+        <section id="Compétences">
+            <h1><u>Compétences</u></h1>
+            <h2>Voici comment je situerais mon niveau</h2>
+            <p>Mon niveau en langue</p>
+            <div class="text-with-score">
+                <p>Francais</p>
+                <div class="score">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="text-with-score">
+                <p>Anglais</p>
+                <div class="score">&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="text-with-score">
+                <p>Espagnol</p>
+                <div class="score">&#9733;&#9733;</div>
+            </div>
+            <div class="text-with-score">
+                <p>Chinois</p>
+                <div class="score">&#9733;</div>
+            </div>
+            <p>Mon niveau en Developement Web</p>
+            <div class="text-with-score">
+                <p>HTML</p>
+                <div class="score">&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="text-with-score">
+                <p>CSS</p>
+                <div class="score">&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="text-with-score">
+                <p>Java script</p>
+                <div class="score">&#9733;</div>
+            </div>
+            <div class="text-with-score">
+                <p>PHP</p>
+                <div class="score">&#9733;</div>
+            </div>
+            
+
+            
+        </section>
+
+        <!-- Contenu de la page 4 -->
+        <section id="Expérience">
+            <h1><u>Expérience</u></h1>
+            <h2>Voici la liste de mes emplois</h2>
+            <h3>Employé Polyvalent</h3>
+            <p>J'ai éffectué ce travail pendant 1 an et 3 mois, du 26 décembre 2021 au 26 mars 2023, je l'ai effectué au KFC situé a Mondevilles. Là bas mes taches était de faire la cuisine, faire le ménage, et aider les clients.</p>
+            <h3>Alternance en informatique</h3>
+            <p>Le deuxième poste que j'occupe toujours actuellement est mon poste d'alternant au seins de la caf de l'Ornes qui à debuter le 6 novembre 2023 dans lequel je suis affecté a beaucoup de taches diverse comme le changement de poste des agents, des changement de disque dur, du brassage ou encore du listage d'inventaire sur glpi.</p>
+            <p>Vous pouvez télécharger mon CV pour des informations complémentaires en cliquant sur le lien ci-dessous :</p>
+
+            <!-- Créer le lien vers le fichier PDF -->
+            <a href="CV.pdf" target="_blank" download> Télécharger mon CV ici !! </a>
+        </section>
+
+        <!-- Contenu de la page 5 -->
+        <section id="Formation">
+            <h1><u>Formation</u></h1>
+            <p>Voici la liste de  mes formations.</p>
+            <P>Comencons par mon college de mes 11 a 15 ans, donc de 2013 a 2017 dans un collège privée nommée Marie-Immaculée située a Sées dans lequel j'acquis mon brevet.</P>
+            <p>Puis apres cela j'ai ete au lycee public alain situé à Alancon de 2019 à 2021 dans lequel j'ai obtenu mon bac STI2D. </p>
+            <a href="CV.pdf" target="_blank" download> Télécharger mon CV ici !! </a>
+        </section>
+
+        <!-- Contenu de la page 6 -->
+        <section id="Contact">
+            <h1>Contact</h1>
+        
+            <h2>Inscription</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <label for="nom">Nom de l'expéditeur:</label>
+        <input type="text" id="nom" name="nom" required>
+        <br>
+
+        <label for="email">Adresse de courriel de l'expéditeur:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="objet">Objet du message:</label>
+        <input type="text" id="objet" name="objet" required>
+        <br>
+
+        <label for="message">Contenu du message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+        </section>
+    </main>
+    <script>
+        function showPage(pageId) {
+            // Masquer toutes les sections
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+    
+            // Afficher la section sélectionnée
+            var selectedSection = document.getElementById(pageId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    
+        // Afficher la première section (Accueil) au chargement de la page
+        showPage('Accueil');
+    
+        // Récupérer les liens de navigation
+        var navLinks = document.querySelectorAll('nav a');
+    
+        // Associer un événement de clic à chaque lien de navigation
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Empêcher le comportement de lien par défaut
+                var targetId = this.getAttribute('href').substring(1);
+                showPage(targetId);
+            });
+        });
+    </script>
+
+</body>
+</html>

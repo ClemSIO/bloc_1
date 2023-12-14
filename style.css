@@ -1,0 +1,59 @@
+body {
+    background-color:rgb(165, 165, 165);
+}
+
+section {
+    display: none;
+    padding-top: 30px;
+    font-family: 'Graduate', sans-serif;
+}
+
+section#accueil {
+    display: block;
+}
+.nom {
+    color: blue;
+    font-weight: bolder;
+}
+
+nav {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    background-color: rgb(31, 31, 31);
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    font-family:'Graduate', sans-serif;
+
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(43, 43, 43);
+    font-size: 90px;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+}
+
+img {
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #888888;
+    float: right;
+  }
