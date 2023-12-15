@@ -1,55 +1,52 @@
 <?php
-// Fonction pour générer un captcha simple
-function generateCaptcha() {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $captcha = '';
-    $length = 5; // Longueur du captcha
 
-    for ($i = 0; $i < $length; $i++) {
-        $captcha .= $characters[rand(0, strlen($characters) - 1)];
-    }
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-    return $captcha;
-}
+require '../PHPMailer-6.9.1/src/Exception.php';
+require '../PHPMailer-6.9.1/src/SMTP.php';
+require '../PHPMailer-6.9.1/src/PHPMailer.php';
 
-// Initialiser le captcha
-$captchaValue = generateCaptcha();
-
-// Vérifier le formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire
-    $nom = $_POST["nom"];
-    $email = $_POST["email"];
-    $objet = $_POST["objet"];
-    $message = $_POST["message"];
-    $captchaUser = $_POST["captcha"];
-
-    // Vérifier le captcha
-    if ($captchaUser != $captchaValue) {
-        $error = "Captcha incorrect. Veuillez réessayer.";
-    } else {
-        // En-têtes pour l'envoi de l'e-mail
-        $to = "destinataire@example.com"; // Remplacez par votre adresse e-mail
-        $subject = "Nouveau message de contact: " . $objet;
-        $messageBody = "Nom de l'expéditeur: " . $nom . "\n";
-        $messageBody .= "Adresse de courriel de l'expéditeur: " . $email . "\n";
-        $messageBody .= "Objet du message: " . $objet . "\n";
-        $messageBody .= "Contenu du message:\n" . $message;
-
-        // Envoyer l'e-mail
-        if (mail($to, $subject, $messageBody)) {
-            $success = "Votre message a été envoyé avec succès.";
-        } else {
-            $error = "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard.";
-        }
-    }
+    $nom = $_POST['nom'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $objet = $_POST['objet'];
 }
-?>
+    // Instancier la classe PHPMailer
+    $mail = new PHPMailer(true);
 
-<?php
-    if (isset($error)) {
-        echo "<p style='color: red;'>Erreur: " . $error . "</p>";
-    } elseif (isset($success)) {
-        echo "<p style='color: green;'>" . $success . "</p>";
+    try {
+        //Server settings
+        $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
+        $mail->isSMTP();                                            //Send using SMTP
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->Username   = 'clementpapillon61@gmail.com';                     //SMTP username
+        $mail->Password   = 'tcmp sfew vkxv zrbf';                               //SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+        $mail->Port = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+   
+        // Destinataire et expéditeur
+        $mail->setFrom($email, $objet);
+        $mail->addAddress('clement.papillon@sts-sio-caen.info'); // Remplacez par l'adresse e-mail du destinataire
+
+        // Contenu du message
+        $mail->isHTML(true);
+        $mail->Subject = $email;
+        $mail->Body = $message;
+
+        // Envoyer le message
+        $mail->send();
+
+        // Rediriger vers une page de succès
+        echo "Mail envoyé !";
+        exit();
+    } catch (Exception $e) {
+        // En cas d'erreur, rediriger vers une page d'erreur
+        echo "Erreur d'envoi du mail. Rééssaye encore !";
+        exit();
     }
-    ?>
+?>

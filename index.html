@@ -33,7 +33,7 @@
         .content {
             z-index: 1; /* Place le contenu au-dessus du fond */
             position: relative;
-            color: white;
+            color: rgb(231, 231, 231);
             text-align: center;
             padding: 50px;
         }
@@ -110,30 +110,30 @@
             
         </section>
 
-        <!-- Contenu de la page 3 -->
+        <!-- Contenu de la page 3 -->                    
         <section id="Compétences">
-            <h1><u>Compétences</u></h1>
-            <h2>Voici comment je situerais mon niveau</h2>
-            <p>Mon niveau en langue</p>
+            <h1 ><u>Compétences</u></h1>
+            <h2 id="z">Voici comment je situerais mon niveau</h2>
+            <p id="z">Mon niveau en langue</p>
             <div class="text-with-score">
-                <p>Francais</p>
+                <p >Francais</p>
                 <div class="score">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             </div>
             <div class="text-with-score">
-                <p>Anglais</p>
+                <p >Anglais</p>
                 <div class="score">&#9733;&#9733;&#9733;</div>
             </div>
             <div class="text-with-score">
-                <p>Espagnol</p>
+                <p >Espagnol</p>
                 <div class="score">&#9733;&#9733;</div>
             </div>
             <div class="text-with-score">
-                <p>Chinois</p>
+                <p >Chinois</p>
                 <div class="score">&#9733;</div>
             </div>
-            <p>Mon niveau en Developement Web</p>
+            <p id="z">Mon niveau en Developement Web</p>
             <div class="text-with-score">
-                <p>HTML</p>
+                <p >HTML</p>
                 <div class="score">&#9733;&#9733;&#9733;&#9733;</div>
             </div>
             <div class="text-with-score">
@@ -141,7 +141,7 @@
                 <div class="score">&#9733;&#9733;&#9733;&#9733;</div>
             </div>
             <div class="text-with-score">
-                <p>Java script</p>
+                <p >Java script</p>
                 <div class="score">&#9733;</div>
             </div>
             <div class="text-with-score">
@@ -181,7 +181,7 @@
             <h1>Contact</h1>
         
             <h2>Inscription</h2>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>
+    <form method="post" action="./php.php">
         <label for="nom">Nom de l'expéditeur:</label>
         <input type="text" id="nom" name="nom" required>
         <br>
