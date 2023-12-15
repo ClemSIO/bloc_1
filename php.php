@@ -4,9 +4,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require '../PHPMailer-6.9.1/src/Exception.php';
-require '../PHPMailer-6.9.1/src/SMTP.php';
-require '../PHPMailer-6.9.1/src/PHPMailer.php';
+require './PHPMailer-6.9.1/src/Exception.php';
+require './PHPMailer-6.9.1/src/SMTP.php';
+require './PHPMailer-6.9.1/src/PHPMailer.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire
